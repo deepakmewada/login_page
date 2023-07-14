@@ -33,4 +33,15 @@ Above step will create a `/build` folder inside `/login_component`.
 ```
 streamlit run __init__.py
 ```
-Now streamlit component has started on [localhost:8501](http://localhost:8501)
+-Now streamlit component has started on [localhost:8501](http://localhost:8501)
+
+# Things covered in this assignment
+- Mobile Responsive  
+- Reusable React Code
+- Reusable CSS Code
+- Scalable folder structure
+
+# Library/Plugins used
+- [React](https://react.dev/)
+- [Material UI](https://mui.com/)
+- [Streamlit Component Library](https://www.npmjs.com/package/streamlit-component-lib)
