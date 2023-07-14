@@ -3,13 +3,13 @@ import {
   withStreamlitConnection,
 } from "streamlit-component-lib"
 import React, { ReactNode } from "react"
-import Login from "./Login"
+import Login from "./components/Login"
 
-interface State {}
+interface State { }
 
 class App extends StreamlitComponentBase<State> {
   public render = (): ReactNode => {
-    return  <Login />
+    return <Login />
   }
 }
 

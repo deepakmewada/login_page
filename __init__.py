@@ -11,7 +11,7 @@ st.set_page_config(
 if not _RELEASE:
     _login_component_ = components.declare_component(
         "samooha",
-        url="http://localhost:3000",
+        url="http://localhost:3001",
     )
 else:
     parent_dir = os.path.dirname(os.path.abspath(__file__))
