@@ -3,7 +3,7 @@ import { Streamlit } from "streamlit-component-lib";
 import { Card, CardContent, Button } from '@mui/material';
 import { FormInput, FormPasswordInput } from './common/form';
 
-const logo = require("./../samooha_logo.png")
+const logo = require("./../assets/images/samooha_logo.png")
 
 export default function Login() {
   const [formData, setFormData] = useState({

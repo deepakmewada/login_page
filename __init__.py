@@ -2,7 +2,7 @@ import os
 import streamlit.components.v1 as components
 import streamlit as st
 
-_RELEASE = True
+_RELEASE = False
 st.set_page_config(
     page_title="Samooha Assigment",
     layout="wide",
