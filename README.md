@@ -35,7 +35,7 @@ streamlit run __init__.py
 ```
 -Now streamlit component has started on [localhost:8501](http://localhost:8501)
 
-## Things covered in this assignment
+## Things covered
 - Mobile Responsive  
 - Reusable React Code
 - Reusable CSS Code
