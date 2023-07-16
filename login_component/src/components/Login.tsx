@@ -15,7 +15,8 @@ export default function Login() {
     setFormData({ ...formData, [event.target.name]: event.target.value })
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     alert(`Submitted Form Datra : ${JSON.stringify(formData)}`);
     Streamlit.setComponentValue(`Submitted Form Datra : ${JSON.stringify(formData)}`)
   };
@@ -24,18 +25,20 @@ export default function Login() {
     <div className="login-container">
       <Card className="login-card">
         <CardContent>
-          <img src={logo} alt="Samooha Logo" className="login-logo" />
-          <h2>Sign up using snowflake account</h2>
-          <FormInput label="Account locator" name="account" onChange={handleInputChange} />
-          <FormInput label="Username" name="username" onChange={handleInputChange} />
-          <FormPasswordInput label="Password" name="password" onChange={handleInputChange} />
-          <p>By signing up, I agree to the &nbsp;
-            <b><a href="https://samooha.tech" target="_target" >Terms of Service</a></b>&nbsp; and &nbsp;
-            <b><a href="https://samooha.tech" target="_target">Privacy policy</a></b></p>
-          <Button className="login-button-submit" size="large" variant="contained" disableElevation disabled={!isFormValid} onClick={handleSubmit}>
-            Sign up
-          </Button>
-          <p>Note: You can later login to Samooha as a <br /><b>Provider</b> or a <b>Customer</b></p>
+          <form onSubmit={handleSubmit}>
+            <img src={logo} alt="Samooha Logo" className="login-logo" />
+            <h2>Sign up using snowflake account</h2>
+            <FormInput label="Account locator" name="account" onChange={handleInputChange} />
+            <FormInput label="Username" name="username" onChange={handleInputChange} />
+            <FormPasswordInput label="Password" name="password" onChange={handleInputChange} />
+            <p>By signing up, I agree to the &nbsp;
+              <b><a href="https://samooha.tech" target="_target" >Terms of Service</a></b>&nbsp; and &nbsp;
+              <b><a href="https://samooha.tech" target="_target">Privacy policy</a></b></p>
+            <Button type="submit" className="login-button-submit" size="large" variant="contained" disableElevation disabled={!isFormValid}>
+              Sign up
+            </Button>
+            <p>Note: You can later login to Samooha as a <br /><b>Provider</b> or a <b>Customer</b></p>
+          </form>
         </CardContent>
       </Card>
     </div>
